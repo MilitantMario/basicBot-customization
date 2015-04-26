@@ -66,6 +66,50 @@
             }
         },
         
+        
+
+        //Load the chat package again to account for any changes
+        bot.loadChat();
+
+    }
+
+    //Change the bots default settings and make sure they are loaded on launch
+
+    localStorage.setItem("basicBotsettings", JSON.stringify({
+        botName: "TheArgonBot",
+        language: "english",
+        startupCap: 1, // 1-200
+        startupVolume: 0, // 0-100
+        startupEmoji: false, // true or false
+        cmdDeletion: true,
+        chatLink: "https://rawgit.com/MilitantMario/basicBot/master/lang/en.json",
+        maximumAfk: 120,
+        afkRemoval: true,
+        maximumDc: 60,
+        bouncerPlus: true,
+        blacklistEnabled: true,
+        lockdownEnabled: false,
+        lockGuard: false,
+        maximumLocktime: 10,
+        cycleGuard: true,
+        maximumCycletime: 10,
+        voteSkip: false,
+        voteSkipLimit: 10,
+        timeGuard: true,
+        maximumSongLength: 10,
+        autodisable: true,
+        commandCooldown: 30,
+        usercommandsEnabled: true,
+        lockskipPosition: 3,
+        lockskipReasons: [
+            ["theme", "This song does not fit the room theme. "],
+            ["op", "This song is on the OP list. "],
+            ["history", "This song is in the history. "],
+            ["mix", "You played a mix, which is against the rules. "],
+            ["sound", "The song you played had bad sound quality or no sound. "],
+            ["nsfw", "The song you contained was NSFW (image or sound). "],
+            ["unavailable", "The song you played was not available for some users. "]
+        ],
         fortune = [
 " There is a true and sincere friendship between you and your friends.",
 " You find beauty in ordinary things, do not lose this ability.",
@@ -129,50 +173,7 @@
 " Your heart is a place to draw true happiness.",
 " Your ability to juggle many tasks will take you far.",
 " A friend asks only for your time, not your money.",
-" You will be invited to an exciting event."];
-
-        //Load the chat package again to account for any changes
-        bot.loadChat();
-
-    }
-
-    //Change the bots default settings and make sure they are loaded on launch
-
-    localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "TheArgonBot",
-        language: "english",
-        startupCap: 1, // 1-200
-        startupVolume: 0, // 0-100
-        startupEmoji: false, // true or false
-        cmdDeletion: true,
-        chatLink: "https://rawgit.com/MilitantMario/basicBot/master/lang/en.json",
-        maximumAfk: 120,
-        afkRemoval: true,
-        maximumDc: 60,
-        bouncerPlus: true,
-        blacklistEnabled: true,
-        lockdownEnabled: false,
-        lockGuard: false,
-        maximumLocktime: 10,
-        cycleGuard: true,
-        maximumCycletime: 10,
-        voteSkip: false,
-        voteSkipLimit: 10,
-        timeGuard: true,
-        maximumSongLength: 10,
-        autodisable: true,
-        commandCooldown: 30,
-        usercommandsEnabled: true,
-        lockskipPosition: 3,
-        lockskipReasons: [
-            ["theme", "This song does not fit the room theme. "],
-            ["op", "This song is on the OP list. "],
-            ["history", "This song is in the history. "],
-            ["mix", "You played a mix, which is against the rules. "],
-            ["sound", "The song you played had bad sound quality or no sound. "],
-            ["nsfw", "The song you contained was NSFW (image or sound). "],
-            ["unavailable", "The song you played was not available for some users. "]
-        ],
+" You will be invited to an exciting event."],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
