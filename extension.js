@@ -55,7 +55,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "basicBot",
+        botName: "TheArgonBot",
         language: "english",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
@@ -100,9 +100,9 @@
         opLink: null,
         rulesLink: null,
         themeLink: null,
-        fbLink: null,
+        fbLink: https://www.facebook.com/theargonteam?ref=hl,
         youtubeLink: null,
-        website: null,
+        website: http://argongaming.net/,
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
