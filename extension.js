@@ -201,7 +201,7 @@
 "In 1989, the U.S. military blared AC/DC music at General Noriega's compound in Panama for 2 continuous days. The dictator surrendered.",
 "Metallica is the first and only band to play on all seven continents.",
 "You don't like the original version of a song because it's better. You like it because it's the one you heard first.",
-"Warner Music collected over US$2 million in royalties in 2008 for public usage of the "Happy Birthday" song.",
+"Warner Music collected over US$2 million in royalties in 2008 for public usage of the Happy Birthday song.",
 "Your favorite song is probably your favorite because you associate it with an emotional event in your life.",
 "Your heartbeat changes and mimics the music you listen to.",
 "Flowers can grow faster by listening to music."
