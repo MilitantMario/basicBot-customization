@@ -58,15 +58,32 @@
                             var msg = chat.message;
                             var argument = msg.substring(cmd.length + 1);
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomFortune = Math.floor(Math.random() * basicBot.settings.forune.length);
+                            var randomFortune = Math.floor(Math.random() * basicBot.settings.fortune.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             API.sendChat(subChat(basicBot.chat.fortune, {name: chat.un, botname: basicBot.settings.botName, fortune: argument, response: basicBot.settings.fortune[randomFortune]}));
                      }
             }
         },
         
+        bot.commands.musicfactsCommand = {
+            command: 'facts',
+            rank: 'user',
+            type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                            var crowd = API.getUsers();
+                            var msg = chat.message;
+                            var argument = msg.substring(cmd.length + 1);
+                            var randomUser = Math.floor(Math.random() * crowd.length);
+                            var randomMusicfacts = Math.floor(Math.random() * basicBot.settings.musicfacts.length);
+                            var randomSentence = Math.floor(Math.random() * 1);
+                            API.sendChat(subChat(basicBot.chat.musicfacts, {name: chat.un, botname: basicBot.settings.botName, musicfacts: argument, response: basicBot.settings.musicfacts[randomMusicfacts]}));
+                     }
+            }
+        },
         
-
         //Load the chat package again to account for any changes
         bot.loadChat();
 
@@ -172,7 +189,23 @@
 " Your heart is a place to draw true happiness.",
 " Your ability to juggle many tasks will take you far.",
 " A friend asks only for your time, not your money.",
-" You will be invited to an exciting event."],
+" You will be invited to an exciting event."
+],
+	musicfacts: [
+"Listening to music while working out measurably improves physical performance.",
+"Elvis Presley didn't write any of his songs.",
+"The type of music you listen to affects the way you perceive the world.",
+"Leo Fender, inventor of the Telecaster and Stratocaster, could not play guitar.",
+"The Beatles used to be called Johnny and the Moondogs.",
+"Loud music can make a person drink more in less time.",
+"In 1989, the U.S. military blared AC/DC music at General Noriega's compound in Panama for 2 continuous days. The dictator surrendered.",
+"Metallica is the first and only band to play on all seven continents.",
+"You don't like the original version of a song because it's better. You like it because it's the one you heard first.",
+"Warner Music collected over US$2 million in royalties in 2008 for public usage of the "Happy Birthday" song.",
+"Your favorite song is probably your favorite because you associate it with an emotional event in your life.",
+"Your heartbeat changes and mimics the music you listen to.",
+"Flowers can grow faster by listening to music."
+		],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
