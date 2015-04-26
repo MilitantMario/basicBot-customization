@@ -60,7 +60,7 @@
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomFortune = Math.floor(Math.random() * basicBot.settings.forune.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(subChat(basicBot.chat.fortune, {name: chat.un, botname: basicBot.settings.botName, fortune: basicBot.settings.fortune[randomFortune]}));
+                            API.sendChat(subChat(basicBot.chat.fortune, {name: chat.un, botname: basicBot.settings.botName, fortune: argument, response: basicBot.settings.ball[randomBall]}));
                      }
             }
         },
