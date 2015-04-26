@@ -45,7 +45,7 @@
                     API.sendChat("/me Bacon!!!");
                 }
             }
-        };
+        },
         
         bot.commands.fortuneCommand = [
             command: 'fortune',  //The command to be called. With the standard command literal this would be: !bacon
@@ -64,7 +64,8 @@
                             API.sendChat(subChat(basicBot.chat.fortune, {name: chat.un, botname: basicBot.settings.botName, fortune: basicBot.settings.fortune[randomFortune]}));
                      }
             }
-        };
+        },
+        
         fortune = [
 " There is a true and sincere friendship between you and your friends.",
 " You find beauty in ordinary things, do not lose this ability.",
