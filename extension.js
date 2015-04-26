@@ -48,8 +48,8 @@
         },
         
         bot.commands.fortuneCommand = {
-            command: 'fortune',  //The command to be called. With the standard command literal this would be: !bacon
-            rank: 'user', //Minimum user permission to use the command
+            command: 'fortune',
+            rank: 'user',
             type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
