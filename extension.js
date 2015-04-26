@@ -110,7 +110,7 @@
             ["nsfw", "The song you contained was NSFW (image or sound). "],
             ["unavailable", "The song you played was not available for some users. "]
         ],
-        fortune = [
+        fortune: [
 " There is a true and sincere friendship between you and your friends.",
 " You find beauty in ordinary things, do not lose this ability.",
 " Ideas are like children; there are none so wonderful as your own.",
